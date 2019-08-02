@@ -240,7 +240,7 @@ struct Assets {
 
 impl Assets {
     fn new(ctx: &mut Context) -> GameResult<Assets> {
-        let player_image = graphics::Image::new(ctx, "/player.png")?;
+        let player_image = graphics::Image::new(ctx, "/wabbit_alpha.png")?;
         let shot_image = graphics::Image::new(ctx, "/shot.png")?;
         let rock_image = graphics::Image::new(ctx, "/rock.png")?;
         let font = graphics::Font::new(ctx, "/DejaVuSerif.ttf")?;
