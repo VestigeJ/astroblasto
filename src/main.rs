@@ -160,7 +160,7 @@ const PLAYER_THRUST: f32 = 100.0;
 /// Rotation in radians per second.
 const PLAYER_TURN_RATE: f32 = 3.0;
 /// Refire delay between shots, in seconds.
-const PLAYER_SHOT_TIME: f32 = 0.5;
+const PLAYER_SHOT_TIME: f32 = 0.2;
 
 fn player_handle_input(actor: &mut Actor, input: &InputState, dt: f32) {
     actor.facing += dt * PLAYER_TURN_RATE * input.xaxis;
