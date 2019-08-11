@@ -72,7 +72,7 @@ struct Actor {
 }
 
 const PLAYER_LIFE: f32 = 1.0;
-const SHOT_LIFE: f32 = 2.0;
+const SHOT_LIFE: f32 = 4.0;
 const ROCK_LIFE: f32 = 1.0;
 
 const PLAYER_BBOX: f32 = 12.0;
@@ -346,7 +346,7 @@ impl MainState {
         let player = &self.player;
         let mut shot = create_shot();
         shot.pos = player.pos;
-        shot.facing = player.facing;
+        shot.facing = player.facing + 1.575;
         let direction = vec_from_angle(shot.facing);
         shot.velocity.x = SHOT_SPEED * direction.x;
         shot.velocity.y = SHOT_SPEED * direction.y;
