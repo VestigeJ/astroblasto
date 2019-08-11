@@ -151,7 +151,7 @@ fn create_rocks(num: i32, exclusion: Point2, min_radius: f32, max_radius: f32) -
 /// **********************************************************************
 
 /// How fast shots move.
-const SHOT_SPEED: f32 = 200.0;
+const SHOT_SPEED: f32 = 100.0;
 /// Angular velocity of how fast shots rotate.
 const SHOT_ANG_VEL: f32 = 0.1;
 
@@ -241,7 +241,7 @@ struct Assets {
 impl Assets {
     fn new(ctx: &mut Context) -> GameResult<Assets> {
         let player_image = graphics::Image::new(ctx, "/car.png")?;
-        let shot_image = graphics::Image::new(ctx, "/shot.png")?;
+        let shot_image = graphics::Image::new(ctx, "/pepperoni.png")?;
         let rock_image = graphics::Image::new(ctx, "/rock.png")?;
         let font = graphics::Font::new(ctx, "/DejaVuSerif.ttf")?;
 
