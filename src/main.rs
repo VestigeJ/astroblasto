@@ -79,7 +79,7 @@ const PLAYER_BBOX: f32 = 12.0;
 const ROCK_BBOX: f32 = 12.0;
 const SHOT_BBOX: f32 = 6.0;
 
-const MAX_ROCK_VEL: f32 = 50.0;
+const MAX_ROCK_VEL: f32 = 5.0;
 
 /// *********************************************************************
 /// Now we have some constructor functions for different game objects.
@@ -242,7 +242,7 @@ impl Assets {
     fn new(ctx: &mut Context) -> GameResult<Assets> {
         let player_image = graphics::Image::new(ctx, "/car.png")?;
         let shot_image = graphics::Image::new(ctx, "/pepperoni.png")?;
-        let rock_image = graphics::Image::new(ctx, "/rock.png")?;
+        let rock_image = graphics::Image::new(ctx, "/star.png")?;
         let font = graphics::Font::new(ctx, "/DejaVuSerif.ttf")?;
 
         let shot_sound = audio::Source::new(ctx, "/pew.ogg")?;
@@ -321,7 +321,7 @@ impl MainState {
 
         let assets = Assets::new(ctx)?;
         let player = create_player();
-        let rocks = create_rocks(5, player.pos, 100.0, 250.0);
+        let rocks = create_rocks(100, player.pos, 100.0, 250.0);
 
         let (width, height) = graphics::drawable_size(ctx);
         let s = MainState {
